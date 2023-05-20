@@ -1,0 +1,6 @@
+index.php에 밑에 소스 삽입
+include_once("$g4[path]/lib/popup.lib.php");
+
+
+tail.php 에 소스 추가
+echo mw_popup();

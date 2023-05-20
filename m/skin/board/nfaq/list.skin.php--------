@@ -1,0 +1,429 @@
+<?
+if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가 
+
+// 선택옵션으로 인해 셀합치기가 가변적으로 변함
+$colspan = 10;
+if ($is_category) $colspan++;
+if ($is_checkbox) $colspan++;
+if ($is_good) $colspan++;
+if ($is_nogood) $colspan++;
+// 제목이 두줄로 표시되는 경우 이 코드를 사용해 보세요.
+// <nobr style='display:block; overflow:hidden; width:000px;'>제목</nobr>
+if(!$board['bo_use_list_content'])
+	alert("관리자 모드 목록에서 내용보기를 체크해주세요");
+
+$table_head = "<table width='100%' border='0' cellspacing='0' cellpadding='0'><tr><td height='27'>";
+$table_tail = "</td></tr><tr><td  height='1' background='$board_skin_path/img/dotline.jpg'></td></tr></table>";
+?>
+<script language="JavaScript" src="<?="$g4[path]/js/board.js"?>"></script>
+<table width="679" align=center cellpadding=0 cellspacing=0>
+<tr><td> 
+ <table border=0 width="100%" cellspacing="0" cellpadding="0">
+<tr height="25">
+    <td width="50%">
+        <form name="fcategory" method="get" style="margin:0; padding:0;">
+        <? if ($is_category) { ?>
+        <select name=sca onchange="location='<?=$category_location?>'+this.value;">
+        <option value=''>전체</option>
+        <?=$category_option?>
+        </select>
+        <? } ?>
+        </form>
+    </td>
+    <td align="right">
+        <img src="<?=$board_skin_path?>/img/icon_total.gif" align=absmiddle>
+        <span style="color:#888888; font-weight:bold;">Total <?=number_format($total_count)?></span>
+        <? if ($rss_href) { ?><a href='<?=$rss_href?>'><img src='<?=$board_skin_path?>/img/btn_rss.gif' border=0 align=absmiddle></a><?}?>
+        <? if ($admin_href) { ?><a href="<?=$admin_href?>"><img src="<?=$board_skin_path?>/img/btn_admin.gif" border="0" align="absmiddle" title="관리자"></a><?}?>    </td>
+</tr>
+<tr><td height=5></td></tr>
+</table>         
+  
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height=8>
+    
+    <div style="border:1px solid #ddd; height:34px; background:url(<?=$board_skin_path?>/img/title_bg.gif) repeat-x;">
+    <table width=100% height="34" border=0 cellpadding=0 cellspacing=0 style="font-weight:bold; color:#505050;">
+      <tr>
+        <td width="10%" align="center" valign="middle">NO</td>
+        <td width="80%" align="center" valign="middle"><?=$board['bo_subject']?></td>
+        <td width="10%" align="center" valign="middle"></a></td>
+      </tr>
+
+    </table>
+    </div>
+    <div style="height:3px; background:url(<?=$board_skin_path?>/img/title_shadow.gif) repeat-x; line-height:1px; font-size:1px;"></div>
+    </td>
+  </tr>
+  <tr>
+    <td height=5></td>
+  </tr>
+</table>
+
+<!-- 제목 과 내용-->
+<form name="fboardlist" method="post" style="margin:0px;">
+<input type="hidden" name="bo_table" value="<?=$bo_table?>">
+<input type="hidden" name="sfl"  value="<?=$sfl?>">
+<input type="hidden" name="stx"  value="<?=$stx?>">
+<input type="hidden" name="spt"  value="<?=$spt?>">
+<input type="hidden" name="page" value="<?=$page?>">
+<input type="hidden" name="sw"   value="">
+ <? for ($i=0; $i<count($list); $i++) { ?> 	  
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+              <table width=100% height="27" border=0  cellpadding=0 cellspacing=0>
+                <tr> 
+                  <td width=10% align="center"> 
+                  <!-- 제목 -->
+				  <? 
+					if ($wr_id == $list[$i][wr_id]) // 현재위치
+        			    echo "<span style='font:bold 11px tahoma; color:#E15916;'>{$list[$i][num]}</span>";
+        			else
+        			    echo "<span style='font:normal 11px tahoma; color:#B3B3B3;'>{$list[$i][num]}</span>";
+        			?>
+        			</td>
+                  <td width=1% align="left" valign="bottom"><img style="margin-bottom:4" src="<?=$board_skin_path?>/img/q.gif" border=0 /></td>
+                  <td width="67%" align="left" valign="middle">
+                    &nbsp;
+                    <? if ($is_checkbox) { ?>
+                  <input type=checkbox ondblclick="if (this.checked) all_checked(true); else all_checked(false);" name=chk_wr_id[] value="<?=$list[$i][wr_id]?>"><? } ?> <? if ($is_category && $list[$i][ca_name]) {echo "<span class=small><font color=gray>[<a href='{$list[$i][ca_name_href]}'>{$list[$i][ca_name]}</a>]</font></span> ";} ?> <a onclick=view(<?=$list[$i][wr_id]?>) style='cursor:hand'><?=$list[$i][subject]?></a></td>
+				  <? if (($member[mb_id] && ($member[mb_id] == $write[mb_id])) || $is_admin) { ?>
+                  <td width="6%" align="right" ><a href="<?=$write_href?>&w=u&wr_id=<?=$list[$i][wr_id]?>&page=<?=$page?>">수정</a></td>
+                  <td width="6%" align="right" ><a href="javascript:del('./delete.php?bo_table=<?=$bo_table?>&wr_id=<?=$list[$i][wr_id]?>&page=');">삭제</a></td>
+                  <? } ?>
+                  <td width="10%" align="center"></td>
+                </tr>
+                <tr>
+                  <td colspan="6" height="1" background="<?=$board_skin_path?>/img/dotline.jpg"></td>
+                </tr>
+              </table>             
+              
+              <!-- 내용 -->
+              <div id="view_<?=$list[$i][wr_id]?>" style="display:none"> 
+				<?
+				// 파일 정보 불러오기
+				$file = get_file($bo_table, $list[$i][wr_id]);
+				?>
+		
+			  <table cellspacing=0 cellpadding=0 width=100% height="30" border=0 bgcolor="#F6F6F6">
+
+              <tr>
+              <td width="8%"></td>
+              <td valign=top width=3% align="center"><img style="margin-top:12; margin-left:35; margin-right:10"src="<?=$board_skin_path?>/img/a.gif" align=absmiddle border=0></td>
+              <td width="79%"style=" padding-top:15; padding-bottom:15; padding-right:20px;">
+                <?
+				// 링크
+				for ($j=1; $j<=$g4[link_count]; $j++) {
+			    	if ($list[$i][link][$j]) {
+			    	   	$link = cut_str($list[$i][link][$j], 70);
+			    	   	echo $table_head;
+			    	    echo " <img src='$board_skin_path/img/icon_link.gif' align=absmiddle>";
+			    	    echo "<a href='".$list[$i][link_href][$j]."' target=_blank>";
+			    	    echo "&nbsp;<span style=\"color:#888;\">".$link."</span>";
+			    	    echo "&nbsp;<span style=\"color:#ff6600; font-size:11px;\">[".$list[$i][link_hit][$j]."]</span>";
+			    	    echo $table_tail;
+			    	}
+				}
+				
+				// 파일
+				for($j=0; $j<$file["count"]; $j++){
+					if(!$file[$j][image_type]){
+						echo $table_head;
+						echo "<img src='$board_skin_path/img/icon_file.gif' align='absmiddle'>";
+						echo "&nbsp;<a href=\"javascript:file_download('".$file[$j][href]."', '".$file[$j][source]."');\">";
+						echo "<span style=\"color:#888;\">".$file[$j][source]."</span>";
+						echo "&nbsp;<span style=\"color:#ff6600; font-size:11px;\">[".$file[$j][download]."]</span>";
+						echo "&nbsp;<span style=\"color:#cccccc; font-size:11px;\">DATE:".$file[$j][datetime]."</span></a><br>";
+						echo $table_tail;
+					}	
+					if($j == $file["count"]-1)
+						echo "<div style='height:10px;'></div>";
+				}
+				
+				//이미지
+    			for($j=0; $j<$file["count"]; $j++){
+					if($file[$j][image_type]){
+						echo $file[$j][view]."<br>";
+					}	
+				}
+				
+				// 내용
+				echo preg_replace("/(\<img )([^\>]*)(\>)/i", "\\1 name='target_resize_image[]' onclick='image_window(this)' style='cursor:pointer;' \\2 \\3", $list[$i]['content']);
+				?>
+    		  </td>
+              </tr>
+              </table>
+		      </div>
+                
+                
+                
+                
+                
+                </td>
+    </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td height=5><img src="<?=$board_skin_path?>/img/5px.gif" width="5" height="5" /></td>
+</tr>
+</table>
+<? } ?>
+<? if (count($list) == 0) { 
+echo "<table width=100% border=0 cellspacing=0 cellpadding=0>";
+echo "<tr>";
+echo "<td width=11></td>";
+echo " <td></td>";
+echo "<td width=11></td>";
+echo "</tr>";
+echo " <tr>";
+echo "<td></td>";
+echo "<td  style=padding-right: 5px; padding-left: 5px;><div align=center><br>죄송합니다 찾으시는 게시물이 없습니다</div></td>";
+echo "<td></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td></td>";
+echo "<td><div align=center><img src=$board_skin_path/img/box_10.gif width=1 height=11></div></td>";
+echo "<td></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td height=10 colspan=3></td>";
+echo "</tr>";
+echo "</table>";
+; } 
+?>
+</form>
+
+<!-- 페이지 -->
+       <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height=5></td>
+        </tr>
+   </table>
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+        <tr>
+          <td align="center" valign="middle">
+	     <!-- 페이지 -->
+     <? if($board['bo_page_rows'] < $total_count){   ?>
+<div style="text-align:center; line-height:30px; clear:both; margin:5px 0 10px 0; padding:5px 0; font-family:gulim;">
+    <? if ($prev_part_href) { echo "<a href='$prev_part_href'><img src='$board_skin_path/img/page_search_prev.gif' border=0 align=absmiddle title='이전검색'></a>"; } ?>
+     
+	 <?
+    // 기본으로 넘어오는 페이지를 아래와 같이 변환하여 이미지로도 출력할 수 있습니다.
+    //echo $write_pages;
+    $write_pages = str_replace("처음", "<img src='$board_skin_path/img/page_begin.gif' border='0' align='absmiddle' title='처음'>", $write_pages);
+    $write_pages = str_replace("이전", "<img src='$board_skin_path/img/page_prev.gif' border='0' align='absmiddle' title='이전'>", $write_pages);
+    $write_pages = str_replace("다음", "<img src='$board_skin_path/img/page_next.gif' border='0' align='absmiddle' title='다음'>", $write_pages);
+    $write_pages = str_replace("맨끝", "<img src='$board_skin_path/img/page_end.gif' border='0' align='absmiddle' title='맨끝'>", $write_pages);
+    $write_pages = preg_replace("/<span>([0-9]*)<\/span>/", "<b><span style=\"color:#B3B3B3; font-size:12px;\">$1</span></b>", $write_pages);
+    $write_pages = preg_replace("/<b>([0-9]*)<\/b>/", "<b><span style=\"color:#4D6185; font-size:12px; text-decoration:underline;\">$1</span></b>", $write_pages);
+    ?>
+    <?=$write_pages?>
+    <? if ($next_part_href) { echo "<a href='$next_part_href'><img src='$board_skin_path/img/page_search_next.gif' border=0 align=absmiddle title='다음검색'></a>"; } ?>
+</div>
+<? } ?>
+
+         <table width="100%" height="35" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="f1f1f1">
+          <tr> 
+            <td align="right">
+            <!-- 검색 -->
+            <div style="text-align:center;">
+<form name=fsearch method=get style="margin:0px;">
+<input type=hidden name=bo_table value="<?=$bo_table?>">
+<input type=hidden name=sca      value="<?=$sca?>">
+<select name=sfl style="background-color:#ffffff; border:1px solid #7f9db9; height:21px;">
+    <option value='wr_subject'>질문</option>
+    <option value='wr_content'>답변</option>
+    <option value='wr_subject||wr_content'>질문+답변</option>
+
+</select>
+<input name=stx maxlength=15 itemname="검색어" required value='<?=$stx?>' style="width:204px; background-color:#ffffff; border:1px solid #7f9db9; height:21px;">
+<input type=image src="<?=$board_skin_path?>/img/btn_search.gif" border=0 align=absmiddle>
+<input type=radio name=sop value=and>and
+<input type=radio name=sop value=or>or
+
+</form>
+</div>
+            </td>
+            </tr>
+        </table>
+        <div style="height:1px; line-height:1px; font-size:1px; background-color:#eee; clear:both;">&nbsp;</div>
+		<div style="height:1px; line-height:1px; font-size:1px; background-color:#ddd; clear:both;">&nbsp;</div>
+         		  </td>
+        </tr>
+        <tr>        </tr>
+      </table>
+	<div style="clear:both; margin-top:7px; height:31px;">
+    <!-- 버튼 -->
+    <div style="float:left;">
+    <? if ($list_href) { ?>
+    <a href="<?=$list_href?>"><img src="<?=$board_skin_path?>/img/btn_list.gif" border="0" align=absmiddle></a>
+    <? } ?>
+    <? if ($is_checkbox) { ?>
+    <a href="javascript:select_delete();"><img src="<?=$board_skin_path?>/img/btn_select_delete.gif" border="0" align=absmiddle></a>
+    <a href="javascript:select_copy('copy');"><img src="<?=$board_skin_path?>/img/btn_select_copy.gif" border="0" align=absmiddle></a>
+    <a href="javascript:select_copy('move');"><img src="<?=$board_skin_path?>/img/btn_select_move.gif" border="0" align=absmiddle></a>
+    <? } ?>
+    </div>
+
+    <div style="float:right;">
+    <? if ($write_href) { ?><a href="<?=$write_href?>"><img src="<?=$board_skin_path?>/img/btn_write.gif" border="0"></a><? } ?>
+    </div>
+</div>
+</td></tr></table>
+
+<script language="JavaScript">
+function file_download(link, file) {
+    <? if ($board[bo_download_point] < 0) { ?>if (confirm("'"+file+"' 파일을 다운로드 하시면 포인트가 차감(<?=number_format($board[bo_download_point])?>점)됩니다.\n\n포인트는 게시물당 한번만 차감되며 다음에 다시 다운로드 하셔도 중복하여 차감하지 않습니다.\n\n그래도 다운로드 하시겠습니까?"))<?}?>
+    document.location.href=link;
+}
+</script>
+<script language="JavaScript">
+
+if ("<?=$sca?>") document.fcategory.sca.value = "<?=$sca?>";
+if ("<?=$stx?>") {
+    document.fsearch.sfl.value = "<?=$sfl?>";
+    document.fsearch.sop.value = "<?=$sop?>";
+}
+</script>
+
+<? if ($is_checkbox) { ?>
+<script language="JavaScript">
+function all_checked(sw)
+{
+    var f = document.fboardlist;
+
+    for (var i=0; i<f.length; i++) {
+        if (f.elements[i].name == "chk_wr_id[]")
+            f.elements[i].checked = sw;
+    }
+}
+
+function check_confirm(str)
+{
+    var f = document.fboardlist;
+    var chk_count = 0;
+
+    for (var i=0; i<f.length; i++) {
+        if (f.elements[i].name == "chk_wr_id[]" && f.elements[i].checked)
+            chk_count++;
+    }
+
+    if (!chk_count) {
+        alert(str + "할 게시물을 하나 이상 선택하세요.");
+        return false;
+    }
+    return true;
+}
+
+// 선택한 게시물 삭제
+function select_delete()
+{
+    var f = document.fboardlist;
+
+    str = "삭제";
+    if (!check_confirm(str))
+        return;
+
+    if (!confirm("선택한 게시물을 정말 "+str+" 하시겠습니까?\n\n한번 "+str+"한 자료는 복구할 수 없습니다"))
+        return;
+
+    f.action = "./delete_all.php";
+    f.submit();
+}
+
+// 선택한 게시물 복사 및 이동
+function select_copy(sw)
+{
+    var f = document.fboardlist;
+
+    if (sw == "copy")
+        str = "복사";
+    else
+        str = "이동";
+                       
+    if (!check_confirm(str))
+        return;
+
+    var sub_win = window.open("", "move", "left=50, top=50, width=396, height=550, scrollbars=1");
+
+    f.sw.value = sw;
+    f.target = "move";
+    f.action = "./move.php";
+    f.submit();
+}
+</script>
+<? } ?>
+
+<!-- 펼쳐지는 스크립트-->
+<script>
+var old_i; // 전에 클릭했던 글의 번호값 저장 
+function view(i) { // 답변 표시여부 조정하는 js함수
+	if (old_i==i) {
+		var mode=document.getElementById('view_'+i).style.display;
+		if (mode=='inline'){
+			return_size(i);
+		}else{
+			re_size(i);
+		}
+	}
+	else {
+		if (old_i){
+			return_size(old_i);
+		}
+		re_size(i);
+	}
+	old_i=i;
+
+}
+function re_size(j)
+{
+	document.getElementById('view_'+j).style.display='inline';
+	//이미지 리사이즈	
+	resizeBoardImage(<?=(int)$board['bo_image_width']?>);
+    drawFont();
+}
+
+function return_size(j)
+{
+	// 이미지를 원래 사이즈로 되돌린다
+	var target = document.getElementsByName('target_resize_image[]');
+	if (target.length) {
+        for(i=0; i<target.length; i++) { 
+			if(target[i].tmp_width && target[i].tmp_height) {
+				target[i].width = target[i].tmp_width;
+                target[i].height = target[i].tmp_height;
+			}
+		}
+		//원래 사이즈로 변형이 잘 않되서 검사후 다시 될때 까지...
+		l = target.length-1;
+		if(target[l].width == target[l].tmp_width){
+			document.getElementById('view_'+j).style.display='none';
+		}else{
+			return_size(j);
+		}
+	}else{
+		document.getElementById('view_'+j).style.display='none';
+	}
+}
+
+//게시물 번호가 존재하면 레이어를 연다
+<?
+if($v_id){
+?>
+	var v_id = <?=$v_id?>;
+<?
+}else{
+?>
+	var v_id;
+<?
+}
+?>
+if(v_id)
+	//view()를 직접 불러 들이면 이미지 리사이즈가 않된다..ㅜ.ㅡ
+	document.onload=setTimeout("view(v_id)", 0);
+</script>
+
+

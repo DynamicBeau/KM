@@ -1,0 +1,403 @@
+<html>
+<head>
+<title>KCP Payplus AX + HUB[sample]</title>
+<link href="css/sample.css" rel="stylesheet" type="text/css">
+
+<script language='javascript' src='https://pay.kcp.co.kr/plugin/payplus_test.js'></script>
+<!-- ※ 주의!!!
+     테스트 결제시 : src='https://pay.kcp.co.kr/plugin/payplus_test.js'
+     리얼   결제시 : src='https://pay.kcp.co.kr/plugin/payplus.js'     로 설정해 주시기 바랍니다. -->
+<script language='javascript'>
+
+    // 플러그인 설치(확인)
+    StartSmartUpdate();
+
+    function  jsf__pay( form )
+    {
+        if( document.Payplus.object == null )
+        {
+            openwin = window.open( 'chk_plugin.html', 'chk_plugin', 'width=420, height=100, top=300, left=300' );
+        }
+
+        if ( MakePayMessage( form ) == true )
+        {
+            openwin = window.open( 'proc_win.html', 'proc_win', 'width=420, height=100, top=300, left=300' );
+            return  true;
+        }
+        else
+        {
+            return  false;
+        }
+    }
+
+    // 주문번호 생성 예제
+    function init_orderid()
+    {
+        var today = new Date();
+        var year  = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var date  = today.getDate();
+        var time  = today.getTime();
+
+        if(parseInt(month) < 10) {
+            month = "0" + month;
+        }
+
+        var order_idxx = year + "" + month + "" + date + "" + time;
+
+        document.order_info.ordr_idxx.value = order_idxx;
+    }
+</script>
+</head>
+<body onload="init_orderid();">
+<form name="order_info" action="pp_ax_hub.php" method="post" onSubmit="return jsf__pay(this)">
+<table border='0' cellpadding='0' cellspacing='1' width='500' align='center'>
+    <tr>
+        <td align="left" height="25"><img src="./img/KcpLogo.jpg" border="0" width="65" height="50"></td>
+        <td align='right' class="txt_main">KCP Online Payment System [ESCROW PHP Version]</td>
+    </tr>
+    <tr>
+        <td bgcolor="CFCFCF" height='3' colspan='2'></td>
+    </tr>
+    <tr>
+        <td align='left' colspan='2'>
+            이 페이지는 결제을 요청하는 페이지로써 샘플(예시) 페이지입니다.<br>
+            결제페이지 개발자는 소스 내용 중에 "※ 주의 ※" 표시가 포함된 문장은<br>
+            특히 주의하여 귀사의 요구에 맞게 적절히 수정 적용하시길 바랍니다.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <br>
+            <table width="90%" align="center">
+                <tr>
+                    <td bgcolor="CFCFCF" height='2'></td>
+                </tr>
+                <tr>
+                <!--주문정보 : 필수 사항 입니다 -->
+                    <td align="center"> 주 문 정 보 </td>
+                </tr>
+                <tr>
+                    <td bgcolor="CFCFCF" height='2'></td>
+                </tr>
+            </table>
+            <table width="90%" align="center">
+                <tr>
+                    <td>지불방법</td>
+                    <td>
+                        <select name='pay_method'>
+                        <option value="100000000000">신용카드</option>
+			    	    <option value="010000000000">계좌이체</option>
+			    	    <option value="001000000000">가상계좌</option>
+			    	    <option value="000100000000">카드사포인트</option>
+			    	    <option value="000010000000">휴대폰</option>
+			    	    <option value="000001000000">기타포인트</option>
+			    	    <option value="000000001000">상품권</option>
+			    	    <option value="000000000010">ARS</option>
+			    	    <option value="100101000000">신용카드/카드사포인트/기타포인트</option>
+			    	    <option value="111100000000">신용카드/계좌이체/가상계좌/카드사포인트</option>
+			    	    <option value="100011001010">신용카드/휴대폰/기타포인트/상품권/ARS</option>
+                    	</select>
+                    <!-- <input type="hidden" name="pay_method" value="100000000000"> ex. 신용카드인 경우 -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>상품명</td>
+                    <td>
+                        <input type='text' name='good_name' value='TEST상품명' size='30'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>결제금액</td>
+                    <td>
+                        <input type='text' name='good_mny' value='4950' size='10'>원
+                    </td>
+                </tr>
+                <tr>
+                    <td>주문자명</td>
+                    <td>
+                        <input type='text' name='buyr_name' value='홍길동' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-Mail</td>
+                    <td>
+                        <input type='text' name='buyr_mail' value='boddykim@kcp.co.kr' size='25'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td>
+                        <input type='text' name='buyr_tel1' value='02-2108-1000' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>휴대폰번호</td>
+                    <td>
+                        <input type='text' name='buyr_tel2' value='011-1234-5678' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                <!-- 할부옵션 : 결제시 설정한 개월수 까지만 나타남. (0 ~ 18 까지)
+                     ※ 주의  : 할부는 결제금액이 50,000 원 이상일경우에만 가능합니다.
+                     예) value 값을 "5" 로 설정했을경우 => 카드결제시 결제창에 5개월까지만 선택가능. -->
+                    <td>할부옵션</td>
+                    <td>
+                        <select name='quotaopt'>
+                            <option value="0">일시불만 가능</option>
+                            <option value="3">3개월까지만 가능</option>
+                            <option value="6">6개월까지만 가능</option>
+                            <option value="12">12개월까지만 가능</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td bgcolor="CFCFCF" height='2' colspan='2'></td>
+                </tr>
+                <tr>
+                <!-- 에스크로정보 : 에스크로 사용업체에 적용되는 정보입니다. -->
+                    <td align="center" colspan='2'>에 스 크 로 정 보 (에스크로 가맹점에만 해당)</td>
+                </tr>
+                <tr>
+                    <td bgcolor="CFCFCF" height='2' colspan='2'></td>
+                </tr>
+                <tr>
+                    <td>장바구니 번호</td>
+                    <td>
+                        <!-- 장바구니 번호 (가맹점에서 자체적으로 생성하시기 바랍니다.) -->
+                        <input type='text' name='bask_idxx'      value='123456' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>장바구니 상품 개수</td>
+                    <td>
+                        <!-- 장바구니 상품 개수 -->
+                        <input type='text' name='bask_cntx'      value='3' size='3'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>장바구니 상품 총 금액</td>
+                    <td>
+                        <!-- 장바구니 상품 총 금액 -->
+                        <input type='text' name='bask_amnt'      value='4950' size='10'>원
+                    </td>
+                </tr>
+                <tr>
+                    <td>주문자 우편번호</td>
+                    <td>
+                        <!-- 주문자 우편번호 -->
+                        <input type='text' name='buyr_zipx'      value='158714' size='6'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>주문자 주소</td>
+                    <td>
+                        <!-- 주문자 주소 -->
+                        <input type='text' name='buyr_add1'      value='서울시 구로구 구로3동' size='50'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>주문자 상세주소</td>
+                    <td>
+                        <!-- 주문자 상세주소 -->
+                        <input type='text' name='buyr_add2'      value='170-5 우림E-biz센터' size='50'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>수취인명</td>
+                    <td>
+                        <!-- 수취인 이름 -->
+                        <input type='text' name='rcvr_name'      value='홍길순' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>수취인 전화번호</td>
+                    <td>
+                        <!-- 수취인 전화번호 -->
+                        <input type='text' name='rcvr_tel1'      value='02-2108-1000' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>수취인 휴대폰번호</td>
+                    <td>
+                        <!-- 수취인 휴대폰번호 -->
+                        <input type='text' name='rcvr_tel2'      value='010-0010-0100' size='20'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>수취인 E-Mail</td>
+                    <td>
+                        <!-- 수취인 E-Mail -->
+                        <input type='text' name='rcvr_mail'      value='honggilsoon@kcp.co.kr' size='40'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>수취인 우편번호</td>
+                    <td>
+                        <!-- 수취인 우편번호 -->
+                        <input type='text' name='rcvr_zipx'      value='158714' size='6'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>수취인 주소</td>
+                    <td>
+                        <!-- 수취인 주소 -->
+                        <input type='text' name='rcvr_add1'      value='서울시 구로구 구로3동' size='50'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>수취인 상세주소</td>
+                    <td>
+                        <!-- 수취인 상세주소 -->
+                        <input type='text' name='rcvr_add2'      value='170-5 우림E-biz센터' size='50'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>배송 희망일</td>
+                    <td>
+                        <!-- 배송 희망일 -->
+                        <input type='text' name='rcvr_date'      value='20050519' size='8'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>배송 요청 사항</td>
+                    <td>
+                        <!-- 배송 요청 사항 -->
+                        <input type='text' name='rqst_msgx'      value='배송 전에 전화주세요!' size='50'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td bgcolor="CFCFCF" height='2' colspan='2'></td>
+                </tr>
+                <tr>
+                <!--옵션정보 : 옵션 사항 입니다. 설정 안하거나 값을 보내지 않을경우 default 값으로 설정됩니다.-->                
+                    <td align="center" colspan='2'>옵 션 정 보</td>
+                </tr>
+                <tr>
+                    <td bgcolor="CFCFCF" height='2' colspan='2'></td>
+                </tr>
+                <tr>
+                    <td>스킨</td>
+                <!-- 결제창 스킨을 설정하는 부분입니다. 설정을 하지 않으실 경우 기본창으로 세팅이 됩니다. -->
+                    <td>
+                        <select name='skin'>
+                            <option value="original">기본스킨</option>
+                            <option value="olivegreen">올리브스킨</option>
+                            <option value="violet">보라색스킨</option>
+                            <option value="indigoblue">남색스킨</option>
+                            <option value="brown">갈색스킨</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>상점LOGO</td>
+                <!-- 결제창에 가맹점 사이트의 로고를 띄우는 파라미터 입니다. 
+                     업체의 로고가 있는 URL을 정확히 입력하셔야 하며, 이 파라미터를 생략할시에는 기본 로고(KCP제공)가 뜨게 됩니다.
+                     로고 파일은 GIF파일(92 X 22)만 지원합니다. -->
+                    <td>
+                        <input type='text' name='site_logo' value='http://pay.kcp.co.kr/plugin/shop_logo.gif' size='50' readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="결 제" class="box">
+                <!-- 결제버튼을 이미지로 구현하는 방법 : <input type="image" src="이미지경로"> -->
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="CFCFCF" height='3' colspan='2'></td>
+    </tr>
+    <tr>
+        <td colspan='2' align="center" height='25'>ⓒ Copyright 2005. KCP Inc.  All Rights Reserved.</td>
+    </tr>
+</table>
+
+<!------------------------------ 필수 입력 항목 ------------------------------>
+
+<!-- 요청종류 승인(pay)/취소,매입(mod) 요청시 사용 -->
+<input type='hidden' name='req_tx'    value='pay'>
+<!-- 테스트 결제시 : T0000 으로 설정, 리얼 결제시 : 부여받은 사이트코드 입력 --> 
+<input type='hidden' name='site_cd'   value='T0000'>
+
+<!-- MPI 결제창에서 사용 한글 사용 불가 -->
+<input type='hidden' name='site_name' value='TEST SHOP'>
+<!-- http://testpay.kcp.co.kr/Pay/Test/site_key.jsp 로 접속하신후 부여받은 사이트코드를 입력하고 나온 값을 입력하시기 바랍니다. -->
+<input type='hidden' name='site_key'  value='3grptw1.zW0GSo4PQdaGvsF__'>
+
+<!-- 필수 항목 : PULGIN 설정 정보 변경하지 마세요 -->
+<input type='hidden' name='module_type' value='01'>
+
+<!-- 필수 항목 : 결제 금액/화폐단위 -->
+<input type='hidden' name='currency' value='WON'>
+
+<!-- 주문 번호 -->
+<input type='hidden' name='ordr_idxx' value='' >
+
+
+<!---------------------------- 에스크로 입력 항목 ---------------------------->
+
+<!-- 에스크로 사용 여부 Y,N -->
+<input type='hidden' name='escw_used'      value='Y' size='1'>
+<!-- 테스트 결제시 : TT01 로 설정, 리얼 결제시 : 부여받은 그룹ID 입력 -->
+<input type='hidden' name='escw_gidx'      value='TT01' size='4'>
+<!-- 부여받은 실결제용 사이트코드 입력-->
+<input type='hidden' name='shop_idxx'      value='T0000' size='40'>
+<!-- 장바구니 상품 상세 정보 -->
+<input type='hidden' name='good_info'      value='seq=1vand_idxx=밴더ID_1ordr_numb=장터상세주문ID_1good_code=상품코드_1good_name=상품명_1good_desc=상품설명_1good_svcx=good_cntx=1good_amt1=1000good_amt2=100seq=2vand_idxx=밴더ID_2ordr_numb=장터상세주문ID_2good_code=상품코드_2good_name=상품명_2good_desc=상품설명_2good_svcx=good_cntx=2good_amt1=2000good_amt2=200seq=3vand_idxx=밴더ID_3ordr_numb=장터상세주문ID_3good_code=상품코드_3good_name=상품명_3good_desc=상품설명_3good_svcx=good_cntx=3good_amt1=1500good_amt2=150'>
+<!-- 사용자 ID -->
+<input type='hidden' name='user_idxx'      value='jjg999' size='20'>
+<!-- 사용자 이름 -->
+<input type='hidden' name='user_name'      value='홍걸동' size='20'>
+<!-- 배송 구분 코드 -->
+<input type='hidden' name='deli_code'      value='KILC' size='4'>
+<!-- 에스크로 KEY -->
+<input type='hidden' name='escw_keyx'      value='KILC' size='30'>
+<!-- 수취인 정보 사용 여부 Y,N (에스크로 서비스 사용의 경우, 반드시 Y 로 세팅) -->
+<input type='hidden' name='rcvr_used'      value='Y' size='1'>
+
+
+<!---------------------- PLUGIN 에서 데이터를 받는 항목 ---------------------->
+
+<!-- 필수 항목 : PLUGIN에서 값을 설정하는 부분으로 반드시 포함되어야 합니다. ※수정하지 마십시오.-->
+<input type='hidden' name='res_cd'         value=''>
+<input type='hidden' name='res_msg'        value=''>
+<input type='hidden' name='tno'            value=''>
+<input type='hidden' name='trace_no'       value=''>
+<input type='hidden' name='enc_info'       value=''>
+<input type='hidden' name='enc_data'       value=''>
+<input type='hidden' name='ret_pay_method' value=''>
+<input type='hidden' name='tran_cd'        value=''>
+<input type='hidden' name='bank_name'      value=''>
+<input type='hidden' name='use_pay_method' value=''>
+
+<!-- 현금영수증 관련 정보 : PLUGIN 에서 내려받는 정보입니다 -->
+<input type='hidden' name='cash_tsdtime'   value=''>
+<input type='hidden' name='cash_yn'        value=''>
+<input type='hidden' name='cash_authno'    value=''>
+
+<!-- 카드사 포인트 -->
+<!-- My LG 포인트, BCTOP 포인트를 2개 다 쓸때, 설정 하시면 됩니다. 
+     카드사 포인트를 한개만 쓰실 경우는 셋팅 안하셔도 됩니다. -->
+
+<!-- My LG 포인트:PTLG, BC TOP: PTBC -->
+<input type="hidden" name='pnt_issue' value=""> 
+
+<!-- 사용가능한 포인트 -->
+<input type="hidden" name='use_pnt'   value=""> 
+
+<!-- 비씨 TOP 포인트 결제 시에는 반드시 value에 값을 입력. 결제 시 사용자로 부터 입력 받지 않도록 하여야 합니다. -->
+<input type='hidden' name='soc_no'    value=''>
+
+</form>
+</center>
+</body>
+</html>

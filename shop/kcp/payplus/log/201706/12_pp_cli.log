@@ -1,0 +1,5 @@
+0612-162013 -  9060 - E87696CGDu7al5dn - MSG : TX_START - site_cd=[E8769]+tx_cd=[00100000]+ordr_idxx=[1706120001]+log_level=[3]
+0612-162013 -  9060 - E87696CGDu7al5dn - MSG : PG_서버_접속__정상
+0612-162013 -  9060 - E87696CGDu7al5dn - MSG : PG_서버_요청_전문_전송__정상
+0612-162013 -  9060 - E87696CGDu7al5dn - MSG : PG_서버_응답_전문_수신__정상
+0612-162013 -  9060 - E87696CGDu7al5dn - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=E87696CGDu7al5dnpay_method=PACAorder_no=1706120001card_cd=CCDIcard_name=현대카드acqu_cd=CCDIacqu_name=현대카드card_no=4330280000001339mcht_taxno=1138521083mall_taxno=1138641596ca_order_id=1706120001tno=17793182048217amount=1000000card_mny=1000000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20170612162013van_apptime=20170612162013app_no=00711607bizx_numb=150252705quota=05noinf=Ynoinf_type=CARDpg_txid=0612162013MP34CAYGAVCA0000010000000500711607use_point=0res_tax_flag=TG01res_tax_mny=909090res_free_mny=0res_vat_mny=90910partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0join_cd=0000]

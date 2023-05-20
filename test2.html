@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+  
+<script type="text/javascript">
+
+document.write('<div style="font:12pt DotumChe">');
+document.write('<br />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [ 구구단 ]<br />');
+
+
+for (var j = 1; j <= 9; j++) {
+  document.write('<br />');
+  for (var i = 2; i <= 5; i++) {  // 2단 ~ 5단까지
+    document.write(i, ' X ', j, ' = ', leadingSpaces(i * j, 2), ' &nbsp; ');
+  }
+}
+
+
+document.write('<br />');  // 줄바꿈
+
+
+for (var j = 1; j <= 9; j++) {
+  document.write('<br />');
+  for (var i = 6; i <= 9; i++) {  // 6단 ~ 9단까지
+    document.write(i, ' X ', j, ' = ', leadingSpaces(i * j, 2), ' &nbsp; ');
+  }
+}
+
+
+document.write('</div>');
+
+
+
+
+// 1자리 숫자 앞에 공백을 붙여 2자리로 맞추는 함수
+// 가령, '5'를 ' 5'로
+function leadingSpaces(n, digits) {
+  var space = '';
+  n = n.toString();
+
+  if (n.length < digits) {
+    for (var i = 0; i < digits - n.length; i++)
+      space += '&nbsp;';
+  }
+  return space + n;
+}
+
+</script>
+
+<HTML>
+<HEAD>
+<TITLE> New doc-ument </TITLE>
+</HEAD>
+
+<BODY>
+<FORM METHOD=POST ACTION="">
+<INPUT TYPE="text" NAME="num1" value="<?=$num1?>"> 
+<SELECT NAME="mode">
+ <option value='+'>+</option>
+ <option value='-'>-</option>
+ <option value='*'>*</option>
+ <option value='/'>/</option>
+</SELECT> 
+<INPUT TYPE="text" NAME="num2" value="<?=$num2?>">
+<INPUT TYPE="submit" value="계산">
+</FORM>
+
+<?
+ if ($num1 & $num2 & $mode) {
+  if ($mode == "+") $result = $num1 + $num2;
+  else if ($mode == "-") $result = $num1 - $num2;
+  else if ($mode == "*") $result = $num1 * $num2;
+  else if ($mode == "/") $result = $num1 / $num2;
+
+  echo "$num1 $mode $num2 = $result";
+ }
+?>
+</BODY>
+</HTML>
+
+
+
+
+ </BODY>
+</HTML>

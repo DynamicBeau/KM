@@ -1,0 +1,1 @@
+<script type="text/javascript">doc_write(flash_movie("<?=$g4[path]?>/flash/main_menu.swf?PageNum=000000&path=<?=$g4[path]?>", 'top_flash',670, 57, "transparent"));</script>

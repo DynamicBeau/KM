@@ -1,0 +1,25 @@
+1213-110330 -  9868 - P5513CDB3GA0QaSR - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212130005]+log_level=[3]
+1213-110330 -  9868 - P5513CDB3GA0QaSR - MSG : PG_서버_접속__정상
+1213-110330 -  9868 - P5513CDB3GA0QaSR - MSG : PG_서버_요청_전문_전송__정상
+1213-110330 -  9868 - P5513CDB3GA0QaSR - MSG : PG_서버_응답_전문_수신__정상
+1213-110330 -  9868 - P5513CDB3GA0QaSR - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PAVCorder_no=1212130005tno=20121213386025van_txid=DP002012121318541534amount=48000escw_yn=Nvan_cd=SCWRbankcode=BK04bankname=국민은행depositor=한국사이버결제account=63659013670416app_time=20121213110331van_apptime=20121213110331mall_taxno=1281695261va_date=20121220235959]
+1213-111019 - 30532 - P5513CDB9UD68HhQ - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212130001]+log_level=[3]
+1213-111019 - 30532 - P5513CDB9UD68HhQ - MSG : PG_서버_접속__정상
+1213-111019 - 30532 - P5513CDB9UD68HhQ - MSG : PG_서버_요청_전문_전송__정상
+1213-111020 - 30532 - P5513CDB9UD68HhQ - MSG : PG_서버_응답_전문_수신__정상
+1213-111020 - 30532 - P5513CDB9UD68HhQ - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PACAorder_no=1212130001res_en_msg=processing completedcard_cd=CCSScard_name=삼성카드acqu_cd=CCSSacqu_name=삼성카드card_no=4075900000009200mcht_taxno=1138521083mall_taxno=1281695261ca_order_id=1212130001tno=20121213389207amount=116000card_mny=116000coupon_mny=0escw_yn=Nvan_cd=VNCSapp_time=20121213111019van_apptime=20121213111019app_no=47238109bizx_numb=24450105quota=00noinf=Npg_txid=1213111019MP01EC2PJLTY0000001160000047238109partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0join_cd=0000]
+1213-111246 - 31490 - P5513CDBCWA0QaSR - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212130006]+log_level=[3]
+1213-111246 - 31490 - P5513CDBCWA0QaSR - MSG : PG_서버_접속__정상
+1213-111246 - 31490 - P5513CDBCWA0QaSR - MSG : PG_서버_요청_전문_전송__정상
+1213-111246 - 31490 - P5513CDBCWA0QaSR - MSG : PG_서버_응답_전문_수신__정상
+1213-111246 - 31490 - P5513CDBCWA0QaSR - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PAVCorder_no=1212130006tno=20121213390483van_txid=DP002012121318541724amount=48000escw_yn=Nvan_cd=SCWRbankcode=BK05bankname=외환은행depositor=한국사이버결제account=921356333633app_time=20121213111247van_apptime=20121213111247mall_taxno=1281695261va_date=20121220235959]
+1213-112416 - 21708 - P5513CDBLH8Kb1Q1 - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212130007]+log_level=[3]
+1213-112416 - 21708 - P5513CDBLH8Kb1Q1 - MSG : PG_서버_접속__정상
+1213-112417 - 21708 - P5513CDBLH8Kb1Q1 - MSG : PG_서버_요청_전문_전송__정상
+1213-112417 - 21708 - P5513CDBLH8Kb1Q1 - MSG : PG_서버_응답_전문_수신__정상
+1213-112417 - 21708 - P5513CDBLH8Kb1Q1 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PACAorder_no=1212130007res_en_msg=processing completedcard_cd=CCKMcard_name=KB국민카드acqu_cd=CCKMacqu_name=KB국민카드card_no=9445410400008082mcht_taxno=1138521083mall_taxno=1281695261ca_order_id=1212130007tno=20121213396087amount=66000card_mny=66000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20121213112417van_apptime=20121213112417app_no=30006301bizx_numb=00013219101quota=00noinf=Npg_txid=1213112417MP01EJ2Q1KDT0000000660000030006301partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0isp_partner_cd=000204040090011join_cd=0000]
+1213-123501 - 15560 - P5513CDCXkF1hIG7 - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212130008]+log_level=[3]
+1213-123501 - 15560 - P5513CDCXkF1hIG7 - MSG : PG_서버_접속__정상
+1213-123501 - 15560 - P5513CDCXkF1hIG7 - MSG : PG_서버_요청_전문_전송__정상
+1213-123502 - 15560 - P5513CDCXkF1hIG7 - MSG : PG_서버_응답_전문_수신__정상
+1213-123502 - 15560 - P5513CDCXkF1hIG7 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PACAorder_no=1212130008res_en_msg=processing completedcard_cd=CCBCcard_name=BC카드acqu_cd=CCBCacqu_name=BC카드card_no=6281808100007223mcht_taxno=1138521083mall_taxno=1281695261ca_order_id=1212130008tno=20121213427482amount=4300card_mny=4300coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20121213123502van_apptime=20121213123502app_no=65849944bizx_numb=725479023quota=00noinf=Npg_txid=1213123502MP01ED2SKJKG0000000043000065849944partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=1isp_issuer_cd=BC03isp_issuer_nm=기업비씨isp_partner_cd=050100030383281join_cd=0000]

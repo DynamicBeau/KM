@@ -1,0 +1,46 @@
+
+
+
+<input type="text" id="input_1" />
+
+<input type="text" id="input_2" />
+
+<input type="text" id="input_3" />
+
+<input type="text" id="input_4" />
+
+
+
+
+<script type="text/javascript">
+
+var get_sum = function(){
+
+var input_1 = doc-ument.getElementById('input_!');
+
+var input_2 = doc-ument.getElementById('input_!');
+
+var input_3 = doc-ument.getElementById('input_!');
+
+var input_4 = doc-ument.getElementById('input_!');
+
+
+
+
+var result = input_1.value + input_2.value + input_3.value + input_4.value;
+
+
+return result;
+
+}
+
+
+
+
+alert(get_sum());
+
+
+
+
+</script>
+

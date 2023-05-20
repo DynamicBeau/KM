@@ -1,0 +1,5 @@
+0319-120538 - 25045 - E87693JC11FMT4p8 - MSG : TX_START - site_cd=[E8769]+tx_cd=[00100000]+ordr_idxx=[1603190001]+log_level=[3]
+0319-120538 - 25045 - E87693JC11FMT4p8 - MSG : PG_서버_접속__정상
+0319-120538 - 25045 - E87693JC11FMT4p8 - MSG : PG_서버_요청_전문_전송__정상
+0319-120539 - 25045 - E87693JC11FMT4p8 - MSG : PG_서버_응답_전문_수신__정상
+0319-120539 - 25045 - E87693JC11FMT4p8 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=E87693JC11FMT4p8pay_method=PACAorder_no=1603190001card_cd=CCLGcard_name=신한카드acqu_cd=CCLGacqu_name=신한카드card_no=4450900000008955mcht_taxno=1138521083mall_taxno=1138641596ca_order_id=1603190001tno=20160319535710amount=1800000card_mny=1800000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20160319120539van_apptime=20160319120539app_no=08464709bizx_numb=0013425574quota=05noinf=Ypg_txid=0319120539MP01FFKQM2290000018000000508464709res_tax_flag=TG01res_tax_mny=1636363res_free_mny=0res_vat_mny=163637partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0join_cd=0000]

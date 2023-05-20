@@ -1,0 +1,5 @@
+1214-100137 - 10079 - P5513CEA1b7dBnIg - MSG : TX_START - site_cd=[P5513]+tx_cd=[07010000]+ordr_idxx=[1212120004]+log_level=[3]
+1214-100137 - 10079 - P5513CEA1b7dBnIg - MSG : PG_서버_접속__정상
+1214-100137 - 10079 - P5513CEA1b7dBnIg - MSG : PG_서버_요청_전문_전송__정상
+1214-100137 - 10079 - P5513CEA1b7dBnIg - MSG : PG_서버_응답_전문_수신__정상
+1214-100137 - 10079 - P5513CEA1b7dBnIg - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리cash_no=20121214065660receipt_no=591088424app_time=20121214100137reg_desc=등록정상처리reg_stat=NTRW]

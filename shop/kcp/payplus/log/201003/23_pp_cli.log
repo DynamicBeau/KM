@@ -1,0 +1,10 @@
+0323-163908 - 14882 - K21603NGdC3Bl9FH - MSG : TX_START - site_cd=[K2160]+tx_cd=[00100000]+ordr_idxx=[1003230002]+log_level=[3]
+0323-163909 - 14882 - K21603NGdC3Bl9FH - MSG : PG_서버_접속__정상
+0323-163909 - 14882 - K21603NGdC3Bl9FH - MSG : PG_서버_요청_전문_전송__정상
+0323-163911 - 14882 - K21603NGdC3Bl9FH - MSG : PG_서버_응답_전문_수신__정상
+0323-163911 - 14882 - K21603NGdC3Bl9FH - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리card_cd=CCBCcard_name=BC카드acqu_cd=CCBCacqu_name=BC카드card_no=4553032100003603mcht_taxno=1138521083mall_taxno=1170477009tno=20100323143309amount=1000escw_yn=Nvan_cd=VNKCapp_time=20100323163910van_apptime=20100323163910app_no=38234672bizx_numb=725479023quota=00noinf=Npg_txid=0323163910MP01AHH01YI80000000010000038234672join_cd=0000isp_partner_cd=040100031122441]
+0323-163958 - 14899 - K21603NGe13Bl9FH - MSG : TX_START - site_cd=[K2160]+tx_cd=[00100000]+ordr_idxx=[1003230003]+log_level=[3]
+0323-163958 - 14899 - K21603NGe13Bl9FH - MSG : PG_서버_접속__정상
+0323-163958 - 14899 - K21603NGe13Bl9FH - MSG : PG_서버_요청_전문_전송__정상
+0323-163959 - 14899 - K21603NGe13Bl9FH - MSG : PG_서버_응답_전문_수신__정상
+0323-163959 - 14899 - K21603NGe13Bl9FH - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리card_cd=CCBCcard_name=BC카드acqu_cd=CCBCacqu_name=BC카드card_no=4553032100003603mcht_taxno=1138521083mall_taxno=1170477009tno=20100323143588amount=1000escw_yn=Nvan_cd=VNKCapp_time=20100323164000van_apptime=20100323164000app_no=38236211bizx_numb=725479023quota=00noinf=Npg_txid=0323164000MP01ABH030JM0000000010000038236211join_cd=0000isp_partner_cd=040100031122441]

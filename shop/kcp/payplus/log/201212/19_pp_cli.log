@@ -1,0 +1,5 @@
+1219-161019 - 28653 - P5513CJG8L1l6Pm5 - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212190001]+log_level=[3]
+1219-161019 - 28653 - P5513CJG8L1l6Pm5 - MSG : PG_서버_접속__정상
+1219-161019 - 28653 - P5513CJG8L1l6Pm5 - MSG : PG_서버_요청_전문_전송__정상
+1219-161020 - 28653 - P5513CJG8L1l6Pm5 - MSG : PG_서버_응답_전문_수신__정상
+1219-161020 - 28653 - P5513CJG8L1l6Pm5 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PACAorder_no=1212190001res_en_msg=processing completedcard_cd=CCDIcard_name=현대카드acqu_cd=CCDIacqu_name=현대카드card_no=4330280400006608mcht_taxno=1138521083mall_taxno=1281695261ca_order_id=1212190001tno=20121219075963amount=46200card_mny=46200coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20121219161020van_apptime=20121219161020app_no=00962068bizx_numb=150252705quota=00noinf=Npg_txid=1219161020MP34EHBKWIUN0000000462000000962068partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0join_cd=0000]

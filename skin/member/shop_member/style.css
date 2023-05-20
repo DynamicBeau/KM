@@ -1,0 +1,213 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,input,p,blockquote,th,td{margin:0px;padding:0px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+ol,ul{list-style:none;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+table{border-collapse:collapse;border-spacing:0px;}
+fieldset,img{border:0px;}
+caption,th{text-align:left;}
+img,input,select,textarea{vertical-align:middle;}
+
+a:link, a:visited, a:active { text-decoration:none; color:#666; }
+a:hover { text-decoration:none; color:#444; }
+
+.ck_input{height:12px; padding:4px;vertical-align:middle; border:1px solid #DDD;}
+input.focus{border:1px solid #FF6600;padding:4px; }
+.ck_textarea{width:100%; padding:4px; border:1px solid #DDD;}
+.ck_file{height:22px; background:#FFF; border:1px solid #DDD;}
+
+#ck_member_wrap{position:relative; width:700px; margin:0 auto;}
+.ck_join_title{font:normal 26px/240% Arial Black; color:#FF6600; }
+.ck_register_step{height:46px; clear:both; margin-top:30px; margin-bottom:20px;}
+.ck_register_step li{float:left; width:130px; height:46px; line-height:46px; font-weight:bold; text-align:center; background:url(./img/member_img.gif) -170px -10px no-repeat;}
+.ck_register_step li.ck_this{background-position: -10px -10px; color:#FFF;}
+.ck_register_step li.ck_arrow{width:30px; background:url(./img/member_img.gif) -140px -10px no-repeat;}
+
+
+.ck_box{position:relative; background:#F6F6F6; border:1px solid #DDD; padding:20px 30px;}
+.ck_jumin_box{margin-bottom:20px;}
+.ck_jumin_title{font-weight:bold;letter-spacing:-1px; margin-top:20px;}
+.ck_jumin_title p{font:normal 8pt/18px gulim; color:#999;}
+
+.ck_box fieldset.oneline{border-top:1px solid #AAA; border-bottom:1px solid #AAA; margin-top:10px; padding:10px; height:22px;}
+.ck_box fieldset.oneline label{font-weight:bold; padding:0 10px;line-height:22px;}
+.ck_box .ck_warning{font:normal 8pt/12px Dotum; letter-spacing:-1px;color:#666; margin-top:10px}
+.ck_box .ck_warning p{font:normal 8pt/12px Dotum;color:#F00}
+
+.ck_box .ck_register{border:1px solid #FFF; padding:0 30px;}
+.ck_register_title{font-weight:bold;letter-spacing:-1px; background:url(./img/member_img.gif) -8px -132px no-repeat; padding-left:12px;}
+.ck_register_ex{font:normal 8pt Dotum; letter-spacing:-1px; color:#999; margin-top:6px;}
+
+.ck_textarea_box{padding:5px;margin-bottom:20px;margin-top:10px;height:100px; background:#FFF; border:1px solid #DDD; overflow-y:auto;}
+.ck_agree{position:relative; cursor:pointer; line-height:13px;letter-spacing:-1px; text-align:center;}
+.ck_agree strong{font-weight:bold;}
+.ck_agree .checkbox{position:absolute;float:left; left:175px;_left:-16px;overflow:hidden; font-size:0; display:block; width:13px; height:13px; background:url(./img/member_img.gif) -10px -112px no-repeat; }
+
+.ck_agree_btn{position:relative;height:26px; padding:20px; width:280px; margin:0 auto;}
+.ck_next_btn{width:90px;float:left;cursor:pointer; margin-right:10px; height:26px; border:0; text-align:left; padding-left:40px;color:#FFF; font-weight:bold;background:url(./img/member_img.gif) -10px -66px no-repeat; }
+.ck_cancel_btn{display:block; float:left; width:140px; height:26px; line-height:26px; border:0; text-align:center; background:url(./img/member_img.gif) -111px -66px no-repeat; }
+.ck_register_btn{position:relative;height:26px; width:90px; margin:0 auto;}
+.ck_register_btn .ck_join_btn{width:120px; cursor:pointer; height:26px; border:0; text-align:left; padding-left:40px;color:#FFF; font-weight:bold;background:url(./img/member_img.gif) -261px -66px no-repeat;}
+.ck_zip_code_search_btn{text-align:center; width:76px; height:22px; letter-spacing:-1px; font:11px/22px dotum;  display:block; margin-left:120px; margin-top:-22px; background:url(./img/member_img.gif) -10px -152px no-repeat;}
+.ck_star_icon{font:normal 9pt gulim; color:#F00;position:relative; margin-left:-10px;}
+
+.ck_box .ck_register_form{}
+.ck_box .ck_register_form table{clear:both; width:100%; table-layout:fixed; border-top:2px solid #AAA; border-left:1px solid #DDD; margin:10px 0 20px 0;}
+.ck_box .ck_register_form table th{width:120px;vertical-align:middle;line-height:32px; background:#F6F6F6; padding-left:20px; text-align:left; border-bottom:1px solid #DDD; border-right:1px solid #DDD;}
+.ck_box .ck_register_form table td{padding:5px 15px 5px 5px; min-height:22px; text-align:left; border-bottom:1px solid #DDD; background:#FFF; border-right:1px solid #DDD;}
+.ck_box .ck_register_form table td p{font:normal 8pt Dotum; margin-top:4px; color:#777; letter-spacing:-1px;}
+.ck_box .ck_register_form table td span{font:normal 8pt Dotum; letter-spacing:-1px;color:#777; }
+#kcaptcha_image{width:100px; height:50px;}
+
+.ck_register_text{line-height:24px; margin:10px 0; letter-spacing:-1px;}
+.ck_gohome_btn{width:140px; height:26px; margin:0px auto;}
+.ck_gohome_btn a{display:block; font:bold 12px/26px Dotum; color:#666; background:url(./img/member_img.gif) -111px -66px no-repeat; text-align:center;}
+
+/*우편번호 검색창*/
+.ck_zip_warp{position:relative; margin:0px 20px;}
+.ck_zip_warp h1.title{font:normal 22px/240% "Arial Black"; color:#FF6600;  }
+.ck_zip_warp h1.title span{font:normal 20px/240% "Arial Black"; color:#999;  }
+
+.ck_zip_box fieldset.oneline{border-top:1px solid #AAA; margin:10px 0; border-bottom:1px solid #AAA; padding:6px; height:22px;}
+.ck_zip_box fieldset.oneline label{padding:0 10px;line-height:22px; font-weight:normal;}
+.ck_zipcode_search_btn{text-align:center; width:76px; height:22px; font:11px/22px dotum; border:0; background:url(./img/member_img.gif) -10px -152px no-repeat;}
+.ck_find_list{height:200px;padding:5px; background:#FFF; border:1px solid #DDD; overflow-y:auto; margin-top:10px;}
+.ck_find_list a{line-height:22px; display:block; border-bottom:1px solid #DDD; border-top:1px solid #FFF;}
+.ck_find_list a:hover{background:#F6F6F6; border-bottom:1px solid #ccc;border-top:1px solid #eee;}
+
+
+/*로그인 페이지*/
+.ck_login_wrap{position:relative; width:400px; margin:0px auto;}
+.ck_login_wrap .title{height:40px; overflow:hidden; font:normal 26px/40px "Arial Black"; text-align:left; color:#AAA;}
+.ck_login_wrap fieldset{position:relative; padding:0; height:90px; border:1px solid #DDD; background:#FFF;}
+
+.ck_login_wrap fieldset #login_mb_id{position:absolute; width:150px; top:20px; left:20px;}
+.ck_login_wrap fieldset #login_mb_password{position:absolute; width:150px; top:48px; left:20px; display:none;}
+.ck_login_wrap fieldset #login_mb_password2{position:absolute; width:150px; top:48px; left:20px;}
+
+.ck_login_wrap fieldset #od_id{position:absolute; width:150px; top:20px; left:20px;}
+.ck_login_wrap fieldset #od_pwd{position:absolute; width:150px; top:48px; left:20px; display:none;}
+.ck_login_wrap fieldset #od_pwd2{position:absolute; width:150px; top:48px; left:20px;}
+
+.ck_login_wrap fieldset .seved_id{position:absolute; cursor:pointer;font:8pt Dotum; line-height:16px; color:#666;width:100px; top:23px; left:190px; height:13px;}
+
+.ck_login_wrap fieldset .seved_id span{float:left;margin-right:4px; overflow:hidden; font-size:0; display:block; width:13px; height:13px;background:url(./img/member_img.gif) no-repeat;}
+.ck_login_wrap fieldset .seved_id span.off{background-position:-10px -112px;}
+.ck_login_wrap fieldset .seved_id span.on{background-position:-33px -112px;}
+
+.ck_login_wrap fieldset #loginBtn{position:absolute; width:76px; top:48px; left:190px; height:22px; font-weight:bold; background:url(./img/member_img.gif) -10px -152px no-repeat; border:0; }
+.ck_login_wrap .ck_login_otherLinks{text-align:center;margin-top:10px;}
+.ck_login_wrap .ck_join_btn{font-weight:bold;}
+.ck_login_wrap .ck_find_btn{margin-left:10px;}
+
+/*패스워드 확인창*/
+.ck_password_wrap{position:relative; width:350px; margin:0px auto;}
+.ck_password_wrap .title{height:40px; overflow:hidden; font:normal 26px/40px "Arial Black"; text-align:left; color:#AAA;}
+.ck_password_wrap fieldset{position:relative; padding:0; height:62px; border:1px solid #DDD; background:#FFF;}
+.ck_password_wrap fieldset #password_wr_password{position:absolute; width:150px; top:20px; left:20px;}
+.ck_password_wrap fieldset #loginBtn{position:absolute; width:76px; top:20px; left:190px; height:22px; font-weight:bold; background:url(./img/member_img.gif) -10px -152px no-repeat; border:0; }
+.ck_password_wrap .ck_password_text{text-align:center; margin-top:20px;}
+
+/*회원정보수정창*/
+.ck_modify_wrap{position:relative; width:350px; margin:0px auto;}
+.ck_modify_wrap .title{height:40px; overflow:hidden; font:normal 26px/40px "Arial Black"; text-align:left; color:#AAA;}
+.ck_modify_wrap .ck_modify_top{text-align:center; padding-bottom:10px;font-weight:bold;}
+.ck_modify_wrap fieldset{position:relative; padding:0; height:62px; border:1px solid #DDD; background:#FFF;}
+.ck_modify_wrap fieldset #confirm_mb_password{position:absolute; width:150px; top:20px; left:20px;}
+.ck_modify_wrap fieldset #btn_submit{position:absolute; width:76px; top:20px; left:190px; height:22px; font-weight:bold; background:url(./img/member_img.gif) -10px -152px no-repeat; border:0; }
+.ck_modify_wrap .ck_modify_text{text-align:center; margin-top:20px;}
+
+/*스크랩함*/
+.ck_scrap_warp{position:relative; margin:0px 20px 10px 20px;}
+.ck_scrap_warp h1.title{font:normal 22px/240% "Arial Black"; color:#FF6600;  }
+.ck_scrap_warp h1.title span{font:normal 20px/240% "Arial Black"; color:#999;  }
+.ck_scrap_warp table{width:100%;border-top:1px solid #aaa; border-bottom:1px solid #AAA;}
+.ck_scrap_warp table th{border-bottom:1px solid #AAA; height:30px; text-align:center; background:#EEE}
+.ck_scrap_warp table td{border-bottom:1px solid #DDD; height:30px; background:#FFF;}
+.ck_scrap_warp table td.num{text-align:center; font:normal 8pt verdana; color:#AAA}
+.ck_scrap_warp table td.border{}
+.ck_scrap_warp table td.subject{}
+.ck_scrap_warp table td.date{text-align:center; font-size:8pt;}
+.ck_scrap_warp table td.del{text-align:center;}
+
+.pagenum{clear:both; text-align:center; font:normal 8pt gulim; padding:10px;}
+.pagenum a{padding:0 5px; margin-top:20px;}
+.pagenum span{padding:0 5px; font-weight:bold;}
+
+.btn_close{width:76px; display:block; text-align:center; line-height:22px; margin:0px auto;height:22px; font-weight:bold; background:url(./img/member_img.gif) -10px -152px no-repeat; border:0; }
+
+
+/*스크랩하기*/
+.ck_scraping_warp{position:relative; margin:0px 20px;}
+.ck_scraping_warp h1.title{font:normal 22px/240% "Arial Black"; color:#FF6600;  }
+.ck_scraping_warp h2{padding-bottom:10px; text-align:center; font-weight:bold;}
+
+/*메모함*/
+.ck_memo_warp{position:relative; margin:0px 20px;}
+.ck_memo_warp h1.title{font:normal 22px/240% "Arial Black"; color:#FF6600;  }
+.ck_memo_warp h1.title span{color:#999;  }
+.ck_memo_warp h2{padding-bottom:10px; text-align:center; font-weight:bold;}
+.ck_memo_warp .ck_memo_tab{height:26px; margin-bottom:4px}
+.ck_memo_warp .ck_memo_tab a{display:block; float:left; width:120px; text-align:center; height:26px; font:bold 12px/26px Dotum; background:url(./img/member_img.gif) -261px -102px no-repeat; margin-right:4px;}
+.ck_memo_warp .ck_memo_tab a.this{width:80px;text-align:left; padding-left:40px;color:#FFF; background-position: -261px -66px;}
+.ck_memo_warp .ck_memo_tab span{float:right; font:normal 11px/26px Dotum;letter-spacing:-1px; margin-right:10px}
+.ck_memo_warp .ck_memo_tab .ck_memo_prev{display:block;float:right; width:13px; margin-top:5px; height:16px; margin-right:6px;background:url(./img/member_img.gif) -36px -184px no-repeat;}
+.ck_memo_warp .ck_memo_tab .ck_memo_next{display:block;float:right; width:13px; margin-top:5px; height:16px; margin-right:6px;background:url(./img/member_img.gif) -62px -184px no-repeat;}
+
+
+.ck_memo_warp .ck_box p{text-align:left; font:normal 11px Dotum;letter-spacing:-1px; margin-top:6px}
+.ck_memo_warp .ck_memo_list{height:248px; overflow-y:scroll}
+.ck_memo_warp table{width:100%;border-top:1px solid #aaa;text-align:center; }
+.ck_memo_warp table th{height:30px; text-align:center; background:#EEE}
+.ck_memo_warp table td{border-bottom:1px solid #DDD; height:30px; background:#FFF;}
+.ck_memo_warp table td.name{color:#AAA}
+.ck_memo_warp table td.send{font:normal 11px verdana;}
+.ck_memo_warp table td.read{font:normal 11px verdana;}
+.ck_memo_warp table td.read span{color:#06F}
+.ck_memo_warp table td.del{font:normal 11px verdana;}
+
+
+.ck_memo_warp .ck_recv_id{padding-right:10px}
+.ck_memo_warp .ck_recv_memo{padding-right:10px}
+.ck_kcaptcha_image{height:50px; margin-top:6px; border-bottom:1px solid #DDD;}
+.ck_kcaptcha_image #kcaptcha_image{height:40px}
+.ck_memo_warp .ck_memo_btn{margin-top:20px; text-align:center;}
+.ck_memo_warp .ck_memo_btn #btn_submit{width:120px;text-align:left; padding-left:40px;color:#FFF; height:26px; font:bold 12px/26px Dotum; background:url(./img/member_img.gif) -261px -66px no-repeat; border:0;}
+.ck_memo_warp .ck_memo_btn .btn_close_memo{width:120px;text-align:center; height:26px; font:bold 12px/26px Dotum; background:url(./img/member_img.gif) -261px -102px no-repeat; border:0;}
+.ck_memo_warp .ck_memo_btn .btn_memo_list{width:120px;text-align:left; padding-left:40px;color:#FFF; height:26px; font:bold 12px/26px Dotum; background:url(./img/member_img.gif) -261px -66px no-repeat; border:0;}
+
+.ck_memo_warp .ck_memo_view{height:240px; margin-bottom:10px; border:1px solid #DDD;overflow-y:scroll; padding:10px;word-break:break-all;}
+
+/*아이디 패스워드 찾기*/
+.ck_find_warp{position:relative; margin:0px 20px;}
+.ck_find_warp h1.title{font:normal 22px/240% "Arial Black"; color:#FF6600;  }
+.ck_find_warp h1.title span{color:#999;  }
+.ck_find_warp .ck_find_email{padding-right:10px}
+.ck_find_warp .ck_find_btn{margin-top:20px; text-align:center;}
+.ck_find_warp .ck_find_btn #btn_submit{width:90px;text-align:left; padding-left:40px;color:#FFF; height:26px; font:bold 12px/26px Dotum; background:url(./img/member_img.gif) -10px -66px no-repeat; border:0;}
+
+/* 메일보내기 */
+.ck_mail_warp{position:relative; margin:0px 20px;}
+.ck_mail_warp h1.title{font:normal 22px/240% "Arial Black"; color:#FF6600;  }
+.ck_mail_warp h1.title span{color:#999;  }
+.ck_mail_warp h2{padding-bottom:10px; text-align:center; font-weight:bold;}
+
+.ck_mail_warp table{clear:both; width:100%; table-layout:fixed; border-top:2px solid #AAA; border-left:1px solid #DDD; margin:10px 0 20px 0;}
+.ck_mail_warp table th{background:#EEE; padding-left:10px; width:100px; border-right:1px solid #DDD; border-bottom:1px solid #DDD;}
+.ck_mail_warp table td{background:#FFF; min-height:22px;padding:3px 15px 3px 5px; border-right:1px solid #DDD; border-bottom:1px solid #DDD;}
+
+
+.ck_mail_warp .ck_mail_btn{margin-top:20px; text-align:center;}
+.ck_mail_warp .ck_mail_btn #btn_submit{width:120px;text-align:left; padding-left:40px;color:#FFF; height:26px; font:bold 12px/26px Dotum; background:url(./img/member_img.gif) -261px -66px no-repeat; border:0;}
+.ck_mail_warp .ck_mail_btn .btn_close_mail{width:120px;text-align:center; height:26px; font:bold 12px/26px Dotum; background:url(./img/member_img.gif) -261px -102px no-repeat; border:0;}
+
+
+/*자기소개*/
+.ck_profile_warp{position:relative; margin:0px 20px;}
+.ck_profile_warp h1.title{font:normal 22px/240% "Arial Black"; color:#FF6600;  }
+.ck_profile_warp h1.title span{color:#999;  }
+
+.ck_profile_warp table{clear:both; width:100%; table-layout:fixed; border-top:2px solid #AAA; border-left:1px solid #DDD; margin:10px 0 20px 0;}
+.ck_profile_warp table th{background:#EEE; padding-left:10px; width:100px; border-right:1px solid #DDD; border-bottom:1px solid #DDD;}
+.ck_profile_warp table td{background:#FFF; min-height:22px;padding:3px 15px 3px 5px; border-right:1px solid #DDD; border-bottom:1px solid #DDD;}
+
+.ck_profile_warp .ck_prifile_view{height:120px; margin-bottom:10px; border:1px solid #DDD;overflow-y:scroll; padding:10px;word-break:break-all;}

@@ -1,0 +1,5 @@
+1216-114340 - 12487 - P5513CGBgf9kcQ1i - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212160001]+log_level=[3]
+1216-114340 - 12487 - P5513CGBgf9kcQ1i - MSG : PG_서버_접속__정상
+1216-114341 - 12487 - P5513CGBgf9kcQ1i - MSG : PG_서버_요청_전문_전송__정상
+1216-114342 - 12487 - P5513CGBgf9kcQ1i - MSG : PG_서버_응답_전문_수신__정상
+1216-114342 - 12487 - P5513CGBgf9kcQ1i - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PACAorder_no=1212160001res_en_msg=processing completedcard_cd=CCSScard_name=삼성카드acqu_cd=CCSSacqu_name=삼성카드card_no=5411450000002558mcht_taxno=1138521083mall_taxno=1281695261ca_order_id=1212160001tno=20121216114252amount=89500card_mny=89500coupon_mny=0escw_yn=Nvan_cd=VNCSapp_time=20121216114341van_apptime=20121216114341app_no=19319309bizx_numb=24450105quota=00noinf=Npg_txid=1216114341MP01CB71223D0000000895000019319309partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0join_cd=0000]

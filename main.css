@@ -1,0 +1,20 @@
+.mainbox { width:700px; background-color:#eee; border:0px solid #fff; margin-top:0px; margin-left:0px; padding:10px; font-family:verdana; font-size:8pt; font-weight:bold;}
+.top { background-color:#eee; border:5px solid #fff; margin-top:0px; margin-left:0px; padding:10px; }
+.bottom { margin-top:10px; background-color:#eee; border:5px solid #fff; padding:10px 10px 10px 10px; clear:both; font-weight:bold; }
+.middle { background-color:#fff; border:0px solid #ccc; margin-top:10px; margin-left:0px; padding:10px; overflow:hidden; }
+.left1 { float:left; width:170px; background-color:#fff; border:5px solid #ccc; margin-top:0px; margin-left:0px; padding:10px; }
+.main1 { border:5px solid #ccc; background-color:#fff; margin-top:0px; margin-left:210px; padding:10px; min-height:200px; }
+.left2 { float:left; width:170px; background-color:#fff; border:5px solid #ccc; margin-top:0px; margin-left:0px; padding:10px; }
+.main2 { float:left; border:5px solid #ccc; background-color:#fff; margin-top:0px; margin-left:10px; width:230px; padding:10px; }
+.right2 { float:right; width:170px; background-color:#fff; border:5px solid #ccc; margin-top:0px; margin-left:0px; padding:10px; }
+.left3 { float:left; width:150px; background-color:#fff; border:5px solid #ccc; margin-top:0px; margin-left:0px; padding:10px; min-height:150px; }
+.main3 { float:left; width:150px; border:5px solid #ccc; background-color:#fff; margin-top:0px; margin-left:10px; padding:10px; min-height:150px; }
+.right3 { background-color:#fff; border:5px solid #ccc; margin-top:0px; margin-left:380px; padding:10px; min-height:150px; }
+.left4 { float:left; width:180px; background-color:#fff; border:5px solid #eee; margin-top:0px; margin-left:0px; padding:5px; min-height:150px; }
+.left4_1 { background-color:#fff; border:5px solid #ccc; margin:0px 0px 5px 0px; padding:0px; min-height:50px; }
+.main4 { float:left; width:150px; border:5px solid #ccc; background-color:#fff; margin-top:0px; margin-left:10px; padding:10px; min-height:150px; }
+.right4 { background-color:#fff; border:5px solid #eee; margin-top:0px; margin-left:400px; padding:5px; min-height:150px; }
+.right4_1 { background-color:#fff; border:5px solid #ccc; margin:0px 0px 5px 0px; padding:0px; min-height:50px; }
+.left5 { float:left; width:380px; background-color:#fff; border:5px solid #ccc; margin-top:0px; margin-left:0px; padding:5px; min-height:50px; }
+.right5 { background-color:#fff; border:5px solid #ccc; margin-top:0px; margin-left:410px; padding:5px; min-height:50px; }
+.under5 { background-color:#fff; border:5px solid #ccc; margin-top:10px; margin-left:0px; padding:10px; min-height:80px; }

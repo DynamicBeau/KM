@@ -1,0 +1,5 @@
+0225-170134 - 17006 - E87692PH15FGbcCJ - MSG : TX_START - site_cd=[E8769]+tx_cd=[00100000]+ordr_idxx=[1602250001]+log_level=[3]
+0225-170134 - 17006 - E87692PH15FGbcCJ - MSG : PG_서버_접속__정상
+0225-170134 - 17006 - E87692PH15FGbcCJ - MSG : PG_서버_요청_전문_전송__정상
+0225-170135 - 17006 - E87692PH15FGbcCJ - MSG : PG_서버_응답_전문_수신__정상
+0225-170135 - 17006 - E87692PH15FGbcCJ - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=E87692PH15FGbcCJpay_method=PACAorder_no=1602250001card_cd=CCKMcard_name=KB국민카드acqu_cd=CCKMacqu_name=KB국민카드card_no=5585260000006660mcht_taxno=1138521083mall_taxno=1138641596ca_order_id=1602250001tno=20160225726763amount=1375000card_mny=1375000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20160225170134van_apptime=20160225170134app_no=30137373bizx_numb=00013219101quota=00noinf=Npg_txid=0225170134MP01DAO620G40000013750000030137373res_tax_flag=TG01res_tax_mny=1250000res_free_mny=0res_vat_mny=125000partcanc_yn=Ycard_bin_type_01=1card_bin_type_02=0isp_partner_cd=05020404000000Ijoin_cd=0000]

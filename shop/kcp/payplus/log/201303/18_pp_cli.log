@@ -1,0 +1,10 @@
+0318-201157 - 14526 - H83053IKBaA0QaSR - MSG : TX_START - site_cd=[H8305]+tx_cd=[00100000]+ordr_idxx=[1303180002]+log_level=[3]
+0318-201157 - 14526 - H83053IKBaA0QaSR - MSG : PG_서버_접속__정상
+0318-201157 - 14526 - H83053IKBaA0QaSR - MSG : PG_서버_요청_전문_전송__정상
+0318-201157 - 14526 - H83053IKBaA0QaSR - MSG : PG_서버_응답_전문_수신__정상
+0318-201157 - 14526 - H83053IKBaA0QaSR - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PAVCorder_no=1303180002tno=20130318882293van_txid=DP002013031819708446amount=252000escw_yn=Yvan_cd=SCWRbankcode=BK05bankname=외환은행depositor=좋은정보사account=921356491569app_time=20130318201156van_apptime=20130318201156mall_taxno=1299240763va_date=20130325235959va_name=최고관리자]
+0318-201408 - 15024 - H83053IKDmA0QaSR - MSG : TX_START - site_cd=[H8305]+tx_cd=[00100000]+ordr_idxx=[1303180003]+log_level=[3]
+0318-201408 - 15024 - H83053IKDmA0QaSR - MSG : PG_서버_접속__정상
+0318-201408 - 15024 - H83053IKDmA0QaSR - MSG : PG_서버_요청_전문_전송__정상
+0318-201408 - 15024 - H83053IKDmA0QaSR - MSG : PG_서버_응답_전문_수신__정상
+0318-201408 - 15024 - H83053IKDmA0QaSR - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PAVCorder_no=1303180003tno=20130318883166van_txid=DP002013031819708464amount=252000escw_yn=Yvan_cd=SCWRbankcode=BK04bankname=국민은행depositor=좋은정보사account=63619013647841app_time=20130318201407van_apptime=20130318201407mall_taxno=1299240763va_date=20130325235959va_name=최고관리자]

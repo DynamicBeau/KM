@@ -1,0 +1,5 @@
+1220-160315 - 10480 - P5513CKG3FFkdjm1 - MSG : TX_START - site_cd=[P5513]+tx_cd=[07010000]+ordr_idxx=[1212200001]+log_level=[3]
+1220-160315 - 10480 - P5513CKG3FFkdjm1 - MSG : PG_서버_접속__정상
+1220-160315 - 10480 - P5513CKG3FFkdjm1 - MSG : PG_서버_요청_전문_전송__정상
+1220-160315 - 10480 - P5513CKG3FFkdjm1 - MSG : PG_서버_응답_전문_수신__정상
+1220-160315 - 10480 - P5513CKG3FFkdjm1 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리cash_no=20121220228204receipt_no=591258481app_time=20121220160316reg_desc=등록정상처리reg_stat=NTRW]

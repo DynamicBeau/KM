@@ -1,0 +1,5 @@
+1218-153612 - 18021 - P5513CIFZY5Cif7a - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212180002]+log_level=[3]
+1218-153612 - 18021 - P5513CIFZY5Cif7a - MSG : PG_서버_접속__정상
+1218-153612 - 18021 - P5513CIFZY5Cif7a - MSG : PG_서버_요청_전문_전송__정상
+1218-153613 - 18021 - P5513CIFZY5Cif7a - MSG : PG_서버_응답_전문_수신__정상
+1218-153613 - 18021 - P5513CIFZY5Cif7a - MSG : TX_ENDED - res=[res_cd=AC22res_msg=계좌이체|비밀번호 오류pay_method=PABKorder_no=1212180002]

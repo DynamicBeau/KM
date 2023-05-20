@@ -1,0 +1,10 @@
+1217-005331 - 11313 - P5513CH0qC3G1qAS - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212170001]+log_level=[3]
+1217-005331 - 11313 - P5513CH0qC3G1qAS - MSG : PG_서버_접속__정상
+1217-005331 - 11313 - P5513CH0qC3G1qAS - MSG : PG_서버_요청_전문_전송__정상
+1217-005331 - 11313 - P5513CH0qC3G1qAS - MSG : PG_서버_응답_전문_수신__정상
+1217-005331 - 11313 - P5513CH0qC3G1qAS - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PACAorder_no=1212170001res_en_msg=processing completedcard_cd=CCKMcard_name=KB국민카드acqu_cd=CCKMacqu_name=KB국민카드card_no=4147430000004040mcht_taxno=1138521083mall_taxno=1281695261ca_order_id=1212170001tno=20121217435348amount=162000card_mny=162000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20121217005331van_apptime=20121217005331app_no=30016122bizx_numb=00013219101quota=05noinf=Ypg_txid=1217005331MP01EI7T9SH60000001620000530016122partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0isp_partner_cd=040204040090161join_cd=0000]
+1217-112909 - 21803 - P5513CHBSTCFfKBL - MSG : TX_START - site_cd=[P5513]+tx_cd=[00100000]+ordr_idxx=[1212170002]+log_level=[3]
+1217-112909 - 21803 - P5513CHBSTCFfKBL - MSG : PG_서버_접속__정상
+1217-112910 - 21803 - P5513CHBSTCFfKBL - MSG : PG_서버_요청_전문_전송__정상
+1217-112910 - 21803 - P5513CHBSTCFfKBL - MSG : PG_서버_응답_전문_수신__정상
+1217-112910 - 21803 - P5513CHBSTCFfKBL - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리pay_method=PACAorder_no=1212170002res_en_msg=processing completedcard_cd=CCKMcard_name=KB국민카드acqu_cd=CCKMacqu_name=KB국민카드card_no=9445420200004072mcht_taxno=1138521083mall_taxno=1281695261ca_order_id=1212170002tno=20121217614679amount=48000card_mny=48000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20121217112911van_apptime=20121217112911app_no=30004720bizx_numb=00013219101quota=00noinf=Npg_txid=1217112911MP01CF8FZ9BP0000000480000030004720partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0isp_partner_cd=000204040090561join_cd=0000]

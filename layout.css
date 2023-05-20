@@ -1,0 +1,24 @@
+html,body{margin:0 auto;padding:0}
+
+div#container{text-align:left}
+div#navigation{}
+div#extra{}
+div#footer{color: #FFF}
+div#footer p{margin:0;padding:5px 10px}
+
+div#container{width:1000px;margin:0 auto}
+div#wrapper{float:left;width:100%;}
+div#content{margin: 0 237px;width:533px;}
+div#navigation{float:left;width:230px;margin-left:-1024px}
+div#extra{float:left;width:247px;margin-left:-247px}
+div#footer{clear:left;width:100%}
+
+/* 메인 레프트 레이아웃*/
+ul.main_layout_left { list-style:none; width:220px;margin:0;padding:0; }
+ul.main_layout_left li { margin-bottom:10px; }
+/* 메인 레프트 레이아웃*/
+
+/* 서브 페이지 레이아웃*/
+div#sub_content{margin: 0 197px;width:820px;}
+div#sub_navigation{float:left;width:190px;margin-left:-1024px}
+/* 서브 페이지 레이아웃*/

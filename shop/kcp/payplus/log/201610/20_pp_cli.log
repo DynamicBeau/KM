@@ -1,0 +1,5 @@
+1020-095108 - 22740 - E8769AK9mW20lLr9 - MSG : TX_START - site_cd=[E8769]+tx_cd=[00100000]+ordr_idxx=[1610200001]+log_level=[3]
+1020-095108 - 22740 - E8769AK9mW20lLr9 - MSG : PG_서버_접속__정상
+1020-095108 - 22740 - E8769AK9mW20lLr9 - MSG : PG_서버_요청_전문_전송__정상
+1020-095110 - 22740 - E8769AK9mW20lLr9 - MSG : PG_서버_응답_전문_수신__정상
+1020-095110 - 22740 - E8769AK9mW20lLr9 - MSG : TX_ENDED - res=[res_cd=0000res_msg=정상처리res_en_msg=processing completedtrace_no=E8769AK9mW20lLr9pay_method=PACAorder_no=1610200001card_cd=CCBCcard_name=BC카드acqu_cd=CCBCacqu_name=BC카드card_no=9430110000007653mcht_taxno=1138521083mall_taxno=1138641596ca_order_id=1610200001tno=16924648655310amount=320000card_mny=320000coupon_mny=0escw_yn=Nvan_cd=VNKCapp_time=20161020095108van_apptime=20161020095108app_no=60542199bizx_numb=780284397quota=00noinf=Npg_txid=1020095108MG34FHZL3TVV0000003200000060542199res_tax_flag=TG01res_tax_mny=290909res_free_mny=0res_vat_mny=29091partcanc_yn=Ycard_bin_type_01=0card_bin_type_02=0isp_issuer_cd=BC11isp_issuer_nm=농협비씨isp_partner_cd=000100114501134join_cd=0000]
